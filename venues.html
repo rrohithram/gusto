@@ -1,11 +1,372 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gusto — Rooftop Venues</title>
+  <link href="https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 </head>
-<body>
-    <h1>hello world</h1>
+<body style="margin:0;padding:0;background:#0D0D0D;color:#F0EDE6;font-family:'Inter',sans-serif;min-height:100vh;">
+
+  <!-- NAV -->
+  <nav style="display:flex;align-items:center;justify-content:space-between;padding:22px 48px;border-bottom:1px solid #262422;position:sticky;top:0;background:#0D0D0D;z-index:100;">
+    <div style="display:flex;align-items:center;gap:10px;">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none">
+        <rect width="28" height="28" rx="6" fill="#E8642A"/>
+        <path d="M6 20 L14 8 L22 20" stroke="#0D0D0D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+        <line x1="9" y1="15" x2="19" y2="15" stroke="#0D0D0D" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span style="font-family:'Syne',sans-serif;font-weight:800;font-size:20px;letter-spacing:-0.5px;">Gusto</span>
+    </div>
+    <div style="display:flex;align-items:center;gap:32px;">
+      <a href="#" style="color:#F0EDE6;text-decoration:none;font-size:14px;font-weight:500;opacity:0.7;">Explore</a>
+      <a href="#" style="color:#F0EDE6;text-decoration:none;font-size:14px;font-weight:500;opacity:0.7;">How it works</a>
+      <a href="#" style="color:#E8642A;text-decoration:none;font-size:14px;font-weight:600;">List your rooftop</a>
+      <div style="width:34px;height:34px;border-radius:50%;background:#3A3835;display:flex;align-items:center;justify-content:center;cursor:pointer;font-size:14px;">R</div>
+    </div>
+  </nav>
+
+  <!-- HERO / FILTER BAR -->
+  <section style="padding:52px 48px 36px;">
+    <p style="font-size:12px;letter-spacing:3px;text-transform:uppercase;color:#E8642A;font-weight:500;margin:0 0 12px;">Chennai Rooftops</p>
+    <h1 style="font-family:'Syne',sans-serif;font-weight:800;font-size:42px;margin:0 0 6px;letter-spacing:-1.5px;line-height:1.05;">
+      Find your perfect <span style="color:#E8642A;">skyline</span>
+    </h1>
+    <p style="color:#F0EDE6;opacity:0.5;font-size:15px;margin:0 0 36px;font-weight:300;">112 rooftops available tonight</p>
+
+    <!-- SEARCH + FILTERS -->
+    <div style="display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+      <div style="display:flex;align-items:center;gap:10px;background:#3A3835;border:1px solid #262422;border-radius:10px;padding:12px 18px;flex:1;min-width:240px;">
+        <svg width="16" height="16" viewBox="0 0 16 16" fill="none"><circle cx="7" cy="7" r="5" stroke="#F0EDE6" stroke-opacity="0.4" stroke-width="1.5"/><path d="M11 11L14 14" stroke="#F0EDE6" stroke-opacity="0.4" stroke-width="1.5" stroke-linecap="round"/></svg>
+        <input type="text" placeholder="Search neighbourhood, vibe..." style="background:none;border:none;outline:none;color:#F0EDE6;font-family:'Inter',sans-serif;font-size:14px;width:100%;" />
+      </div>
+      <select style="background:#3A3835;border:1px solid #262422;border-radius:10px;padding:12px 18px;color:#F0EDE6;font-family:'Inter',sans-serif;font-size:14px;cursor:pointer;outline:none;">
+        <option>All areas</option>
+        <option>T. Nagar</option>
+        <option>Adyar</option>
+        <option>Anna Nagar</option>
+        <option>OMR</option>
+        <option>Nungambakkam</option>
+      </select>
+      <select style="background:#3A3835;border:1px solid #262422;border-radius:10px;padding:12px 18px;color:#F0EDE6;font-family:'Inter',sans-serif;font-size:14px;cursor:pointer;outline:none;">
+        <option>Any size</option>
+        <option>Up to 20 guests</option>
+        <option>20–50 guests</option>
+        <option>50+ guests</option>
+      </select>
+      <select style="background:#3A3835;border:1px solid #262422;border-radius:10px;padding:12px 18px;color:#F0EDE6;font-family:'Inter',sans-serif;font-size:14px;cursor:pointer;outline:none;">
+        <option>Any vibe</option>
+        <option>Party</option>
+        <option>Intimate dinner</option>
+        <option>Sundowner</option>
+        <option>Corporate</option>
+      </select>
+      <button style="background:#E8642A;color:#0D0D0D;font-weight:600;font-size:14px;padding:12px 24px;border:none;border-radius:10px;cursor:pointer;font-family:'Inter',sans-serif;white-space:nowrap;">Search</button>
+    </div>
+  </section>
+
+  <!-- TAG PILLS -->
+  <div style="padding:0 48px 36px;display:flex;gap:10px;flex-wrap:wrap;">
+    <span style="background:#E8642A;color:#0D0D0D;font-size:12px;font-weight:600;padding:6px 14px;border-radius:20px;cursor:pointer;">All</span>
+    <span style="background:#3A3835;color:#F0EDE6;font-size:12px;font-weight:500;padding:6px 14px;border-radius:20px;cursor:pointer;border:1px solid #262422;opacity:0.8;">🌅 Sundowner</span>
+    <span style="background:#3A3835;color:#F0EDE6;font-size:12px;font-weight:500;padding:6px 14px;border-radius:20px;cursor:pointer;border:1px solid #262422;opacity:0.8;">🎉 Party</span>
+    <span style="background:#3A3835;color:#F0EDE6;font-size:12px;font-weight:500;padding:6px 14px;border-radius:20px;cursor:pointer;border:1px solid #262422;opacity:0.8;">🍽 Private dining</span>
+    <span style="background:#3A3835;color:#F0EDE6;font-size:12px;font-weight:500;padding:6px 14px;border-radius:20px;cursor:pointer;border:1px solid #262422;opacity:0.8;">🎤 Live music</span>
+    <span style="background:#3A3835;color:#F0EDE6;font-size:12px;font-weight:500;padding:6px 14px;border-radius:20px;cursor:pointer;border:1px solid #262422;opacity:0.8;">💼 Corporate</span>
+    <span style="background:#3A3835;color:#F0EDE6;font-size:12px;font-weight:500;padding:6px 14px;border-radius:20px;cursor:pointer;border:1px solid #262422;opacity:0.8;">✨ Rooftop pool</span>
+  </div>
+
+  <!-- VENUE GRID -->
+  <main style="padding:0 48px 80px;display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:28px;">
+
+    <!-- CARD 1 -->
+    <article style="background:#3A3835;border:1px solid #262422;border-radius:16px;overflow:hidden;cursor:pointer;transition:transform 0.2s;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+      <div style="position:relative;height:220px;overflow:hidden;">
+        <div style="width:100%;height:100%;background:linear-gradient(160deg,#2a1a0e 0%,#4a2208 40%,#8a3a10 70%,#c45a1a 100%);display:flex;align-items:center;justify-content:center;">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" opacity="0.25"><rect x="8" y="28" width="48" height="28" stroke="#F0EDE6" stroke-width="2"/><path d="M4 28 L32 8 L60 28" stroke="#F0EDE6" stroke-width="2" stroke-linejoin="round"/><rect x="24" y="40" width="16" height="16" stroke="#F0EDE6" stroke-width="1.5"/></svg>
+        </div>
+        <!-- upload placeholder badge -->
+        <div style="position:absolute;top:12px;right:12px;background:rgba(13,13,13,0.7);backdrop-filter:blur(6px);border-radius:8px;padding:6px 10px;display:flex;align-items:center;gap:5px;">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v6M3 4l3-3 3 3" stroke="#F5C842" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9" stroke="#F5C842" stroke-width="1.3" stroke-linecap="round"/></svg>
+          <span style="font-size:11px;color:#F5C842;font-weight:500;">Add photos</span>
+        </div>
+        <div style="position:absolute;bottom:12px;left:12px;background:rgba(13,13,13,0.7);backdrop-filter:blur(6px);border-radius:6px;padding:4px 10px;">
+          <span style="font-size:11px;color:#F0EDE6;opacity:0.8;">4 photos</span>
+        </div>
+        <div style="position:absolute;top:12px;left:12px;background:#E8642A;border-radius:6px;padding:4px 10px;">
+          <span style="font-size:11px;color:#0D0D0D;font-weight:700;">Featured</span>
+        </div>
+      </div>
+      <div style="padding:20px;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
+          <div>
+            <h2 style="margin:0 0 4px;font-size:17px;font-weight:600;letter-spacing:-0.3px;">The Skyline Loft</h2>
+            <p style="margin:0;font-size:13px;color:#F0EDE6;opacity:0.5;display:flex;align-items:center;gap:4px;">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1C4.067 1 2.5 2.567 2.5 4.5 2.5 7.375 6 11 6 11S9.5 7.375 9.5 4.5C9.5 2.567 7.933 1 6 1z" stroke="#F0EDE6" stroke-opacity="0.4" stroke-width="1.2"/><circle cx="6" cy="4.5" r="1.2" stroke="#F0EDE6" stroke-opacity="0.4" stroke-width="1"/></svg>
+              Nungambakkam, Chennai
+            </p>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="#F5C842"><path d="M6.5 1l1.5 3.1 3.4.5-2.45 2.4.58 3.4L6.5 8.7l-3.03 1.7.58-3.4L1.6 4.6l3.4-.5z"/></svg>
+            <span style="font-size:13px;font-weight:600;color:#F5C842;">4.9</span>
+            <span style="font-size:12px;color:#F0EDE6;opacity:0.4;">(38)</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;">
+          <span style="background:#262422;font-size:11px;padding:4px 10px;border-radius:20px;color:#F0EDE6;opacity:0.7;">🌅 Sundowner</span>
+          <span style="background:#262422;font-size:11px;padding:4px 10px;border-radius:20px;color:#F0EDE6;opacity:0.7;">Up to 40 guests</span>
+          <span style="background:#262422;font-size:11px;padding:4px 10px;border-radius:20px;color:#F0EDE6;opacity:0.7;">Pool view</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid #262422;">
+          <div>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:500;color:#F0EDE6;">₹4,500</span>
+            <span style="font-size:12px;color:#F0EDE6;opacity:0.4;"> / hr</span>
+          </div>
+          <button style="background:transparent;border:1px solid #E8642A;color:#E8642A;font-size:13px;font-weight:600;padding:8px 18px;border-radius:8px;cursor:pointer;font-family:'Inter',sans-serif;">View space</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 2 -->
+    <article style="background:#3A3835;border:1px solid #262422;border-radius:16px;overflow:hidden;cursor:pointer;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'" style="transition:transform 0.2s;">
+      <div style="position:relative;height:220px;overflow:hidden;">
+        <div style="width:100%;height:100%;background:linear-gradient(135deg,#0d1a2a 0%,#1a3a4a 50%,#0a2030 100%);display:flex;align-items:center;justify-content:center;">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" opacity="0.25"><rect x="8" y="28" width="48" height="28" stroke="#F0EDE6" stroke-width="2"/><path d="M4 28 L32 8 L60 28" stroke="#F0EDE6" stroke-width="2" stroke-linejoin="round"/><rect x="24" y="40" width="16" height="16" stroke="#F0EDE6" stroke-width="1.5"/></svg>
+        </div>
+        <div style="position:absolute;top:12px;right:12px;background:rgba(13,13,13,0.7);backdrop-filter:blur(6px);border-radius:8px;padding:6px 10px;display:flex;align-items:center;gap:5px;">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v6M3 4l3-3 3 3" stroke="#F5C842" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9" stroke="#F5C842" stroke-width="1.3" stroke-linecap="round"/></svg>
+          <span style="font-size:11px;color:#F5C842;font-weight:500;">Add photos</span>
+        </div>
+        <div style="position:absolute;bottom:12px;left:12px;background:rgba(13,13,13,0.7);backdrop-filter:blur(6px);border-radius:6px;padding:4px 10px;">
+          <span style="font-size:11px;color:#F0EDE6;opacity:0.8;">6 photos</span>
+        </div>
+      </div>
+      <div style="padding:20px;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
+          <div>
+            <h2 style="margin:0 0 4px;font-size:17px;font-weight:600;letter-spacing:-0.3px;">Terrace 22</h2>
+            <p style="margin:0;font-size:13px;color:#F0EDE6;opacity:0.5;display:flex;align-items:center;gap:4px;">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1C4.067 1 2.5 2.567 2.5 4.5 2.5 7.375 6 11 6 11S9.5 7.375 9.5 4.5C9.5 2.567 7.933 1 6 1z" stroke="#F0EDE6" stroke-opacity="0.4" stroke-width="1.2"/><circle cx="6" cy="4.5" r="1.2" stroke="#F0EDE6" stroke-opacity="0.4" stroke-width="1"/></svg>
+              Adyar, Chennai
+            </p>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="#F5C842"><path d="M6.5 1l1.5 3.1 3.4.5-2.45 2.4.58 3.4L6.5 8.7l-3.03 1.7.58-3.4L1.6 4.6l3.4-.5z"/></svg>
+            <span style="font-size:13px;font-weight:600;color:#F5C842;">4.7</span>
+            <span style="font-size:12px;color:#F0EDE6;opacity:0.4;">(21)</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;">
+          <span style="background:#262422;font-size:11px;padding:4px 10px;border-radius:20px;color:#F0EDE6;opacity:0.7;">🎉 Party</span>
+          <span style="background:#262422;font-size:11px;padding:4px 10px;border-radius:20px;color:#F0EDE6;opacity:0.7;">Up to 80 guests</span>
+          <span style="background:#262422;font-size:11px;padding:4px 10px;border-radius:20px;color:#F0EDE6;opacity:0.7;">DJ setup</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid #262422;">
+          <div>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:500;color:#F0EDE6;">₹7,200</span>
+            <span style="font-size:12px;color:#F0EDE6;opacity:0.4;"> / hr</span>
+          </div>
+          <button style="background:transparent;border:1px solid #E8642A;color:#E8642A;font-size:13px;font-weight:600;padding:8px 18px;border-radius:8px;cursor:pointer;font-family:'Inter',sans-serif;">View space</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 3 -->
+    <article style="background:#3A3835;border:1px solid #262422;border-radius:16px;overflow:hidden;cursor:pointer;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+      <div style="position:relative;height:220px;overflow:hidden;">
+        <div style="width:100%;height:100%;background:linear-gradient(145deg,#1a1000 0%,#3a2800 45%,#6a4a00 100%);display:flex;align-items:center;justify-content:center;">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" opacity="0.25"><rect x="8" y="28" width="48" height="28" stroke="#F0EDE6" stroke-width="2"/><path d="M4 28 L32 8 L60 28" stroke="#F0EDE6" stroke-width="2" stroke-linejoin="round"/><rect x="24" y="40" width="16" height="16" stroke="#F0EDE6" stroke-width="1.5"/></svg>
+        </div>
+        <div style="position:absolute;top:12px;right:12px;background:rgba(13,13,13,0.7);backdrop-filter:blur(6px);border-radius:8px;padding:6px 10px;display:flex;align-items:center;gap:5px;">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v6M3 4l3-3 3 3" stroke="#F5C842" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9" stroke="#F5C842" stroke-width="1.3" stroke-linecap="round"/></svg>
+          <span style="font-size:11px;color:#F5C842;font-weight:500;">Add photos</span>
+        </div>
+        <div style="position:absolute;bottom:12px;left:12px;background:rgba(13,13,13,0.7);backdrop-filter:blur(6px);border-radius:6px;padding:4px 10px;">
+          <span style="font-size:11px;color:#F0EDE6;opacity:0.8;">7 photos</span>
+        </div>
+        <div style="position:absolute;top:12px;left:12px;background:#3A3835;border:1px solid #262422;border-radius:6px;padding:4px 10px;">
+          <span style="font-size:11px;color:#F5C842;font-weight:600;">⚡ Instant book</span>
+        </div>
+      </div>
+      <div style="padding:20px;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
+          <div>
+            <h2 style="margin:0 0 4px;font-size:17px;font-weight:600;letter-spacing:-0.3px;">The Golden Hour</h2>
+            <p style="margin:0;font-size:13px;color:#F0EDE6;opacity:0.5;display:flex;align-items:center;gap:4px;">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1C4.067 1 2.5 2.567 2.5 4.5 2.5 7.375 6 11 6 11S9.5 7.375 9.5 4.5C9.5 2.567 7.933 1 6 1z" stroke="#F0EDE6" stroke-opacity="0.4" stroke-width="1.2"/><circle cx="6" cy="4.5" r="1.2" stroke="#F0EDE6" stroke-opacity="0.4" stroke-width="1"/></svg>
+              Mylapore, Chennai
+            </p>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="#F5C842"><path d="M6.5 1l1.5 3.1 3.4.5-2.45 2.4.58 3.4L6.5 8.7l-3.03 1.7.58-3.4L1.6 4.6l3.4-.5z"/></svg>
+            <span style="font-size:13px;font-weight:600;color:#F5C842;">4.8</span>
+            <span style="font-size:12px;color:#F0EDE6;opacity:0.4;">(33)</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;">
+          <span style="background:#262422;font-size:11px;padding:4px 10px;border-radius:20px;color:#F0EDE6;opacity:0.7;">🌅 Sundowner</span>
+          <span style="background:#262422;font-size:11px;padding:4px 10px;border-radius:20px;color:#F0EDE6;opacity:0.7;">Up to 25 guests</span>
+          <span style="background:#262422;font-size:11px;padding:4px 10px;border-radius:20px;color:#F0EDE6;opacity:0.7;">Sea breeze</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid #262422;">
+          <div>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:500;color:#F0EDE6;">₹5,000</span>
+            <span style="font-size:12px;color:#F0EDE6;opacity:0.4;"> / hr</span>
+          </div>
+          <button style="background:transparent;border:1px solid #E8642A;color:#E8642A;font-size:13px;font-weight:600;padding:8px 18px;border-radius:8px;cursor:pointer;font-family:'Inter',sans-serif;">View space</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 4 -->
+    <article style="background:#3A3835;border:1px solid #262422;border-radius:16px;overflow:hidden;cursor:pointer;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+      <div style="position:relative;height:220px;overflow:hidden;">
+        <div style="width:100%;height:100%;background:linear-gradient(150deg,#1a0a00 0%,#3d1500 50%,#6b2800 100%);display:flex;align-items:center;justify-content:center;">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" opacity="0.25"><rect x="8" y="28" width="48" height="28" stroke="#F0EDE6" stroke-width="2"/><path d="M4 28 L32 8 L60 28" stroke="#F0EDE6" stroke-width="2" stroke-linejoin="round"/><rect x="24" y="40" width="16" height="16" stroke="#F0EDE6" stroke-width="1.5"/></svg>
+        </div>
+        <div style="position:absolute;top:12px;right:12px;background:rgba(13,13,13,0.7);backdrop-filter:blur(6px);border-radius:8px;padding:6px 10px;display:flex;align-items:center;gap:5px;">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v6M3 4l3-3 3 3" stroke="#F5C842" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9" stroke="#F5C842" stroke-width="1.3" stroke-linecap="round"/></svg>
+          <span style="font-size:11px;color:#F5C842;font-weight:500;">Add photos</span>
+        </div>
+        <div style="position:absolute;bottom:12px;left:12px;background:rgba(13,13,13,0.7);backdrop-filter:blur(6px);border-radius:6px;padding:4px 10px;">
+          <span style="font-size:11px;color:#F0EDE6;opacity:0.8;">9 photos</span>
+        </div>
+        <div style="position:absolute;top:12px;left:12px;background:#F5C842;border-radius:6px;padding:4px 10px;">
+          <span style="font-size:11px;color:#0D0D0D;font-weight:700;">New</span>
+        </div>
+      </div>
+      <div style="padding:20px;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
+          <div>
+            <h2 style="margin:0 0 4px;font-size:17px;font-weight:600;letter-spacing:-0.3px;">Madras Heights</h2>
+            <p style="margin:0;font-size:13px;color:#F0EDE6;opacity:0.5;display:flex;align-items:center;gap:4px;">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1C4.067 1 2.5 2.567 2.5 4.5 2.5 7.375 6 11 6 11S9.5 7.375 9.5 4.5C9.5 2.567 7.933 1 6 1z" stroke="#F0EDE6" stroke-opacity="0.4" stroke-width="1.2"/><circle cx="6" cy="4.5" r="1.2" stroke="#F0EDE6" stroke-opacity="0.4" stroke-width="1"/></svg>
+              T. Nagar, Chennai
+            </p>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="#F5C842"><path d="M6.5 1l1.5 3.1 3.4.5-2.45 2.4.58 3.4L6.5 8.7l-3.03 1.7.58-3.4L1.6 4.6l3.4-.5z"/></svg>
+            <span style="font-size:13px;font-weight:600;color:#F5C842;">4.8</span>
+            <span style="font-size:12px;color:#F0EDE6;opacity:0.4;">(5)</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;">
+          <span style="background:#262422;font-size:11px;padding:4px 10px;border-radius:20px;color:#F0EDE6;opacity:0.7;">🍽 Private dining</span>
+          <span style="background:#262422;font-size:11px;padding:4px 10px;border-radius:20px;color:#F0EDE6;opacity:0.7;">Up to 20 guests</span>
+          <span style="background:#262422;font-size:11px;padding:4px 10px;border-radius:20px;color:#F0EDE6;opacity:0.7;">City panorama</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid #262422;">
+          <div>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:500;color:#F0EDE6;">₹3,100</span>
+            <span style="font-size:12px;color:#F0EDE6;opacity:0.4;"> / hr</span>
+          </div>
+          <button style="background:transparent;border:1px solid #E8642A;color:#E8642A;font-size:13px;font-weight:600;padding:8px 18px;border-radius:8px;cursor:pointer;font-family:'Inter',sans-serif;">View space</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 5 -->
+    <article style="background:#3A3835;border:1px solid #262422;border-radius:16px;overflow:hidden;cursor:pointer;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+      <div style="position:relative;height:220px;overflow:hidden;">
+        <div style="width:100%;height:100%;background:linear-gradient(130deg,#0e1a10 0%,#1a3020 50%,#2a4a30 100%);display:flex;align-items:center;justify-content:center;">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" opacity="0.25"><rect x="8" y="28" width="48" height="28" stroke="#F0EDE6" stroke-width="2"/><path d="M4 28 L32 8 L60 28" stroke="#F0EDE6" stroke-width="2" stroke-linejoin="round"/><rect x="24" y="40" width="16" height="16" stroke="#F0EDE6" stroke-width="1.5"/></svg>
+        </div>
+        <div style="position:absolute;top:12px;right:12px;background:rgba(13,13,13,0.7);backdrop-filter:blur(6px);border-radius:8px;padding:6px 10px;display:flex;align-items:center;gap:5px;">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v6M3 4l3-3 3 3" stroke="#F5C842" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9" stroke="#F5C842" stroke-width="1.3" stroke-linecap="round"/></svg>
+          <span style="font-size:11px;color:#F5C842;font-weight:500;">Add photos</span>
+        </div>
+        <div style="position:absolute;bottom:12px;left:12px;background:rgba(13,13,13,0.7);backdrop-filter:blur(6px);border-radius:6px;padding:4px 10px;">
+          <span style="font-size:11px;color:#F0EDE6;opacity:0.8;">2 photos</span>
+        </div>
+      </div>
+      <div style="padding:20px;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
+          <div>
+            <h2 style="margin:0 0 4px;font-size:17px;font-weight:600;letter-spacing:-0.3px;">The Green Perch</h2>
+            <p style="margin:0;font-size:13px;color:#F0EDE6;opacity:0.5;display:flex;align-items:center;gap:4px;">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1C4.067 1 2.5 2.567 2.5 4.5 2.5 7.375 6 11 6 11S9.5 7.375 9.5 4.5C9.5 2.567 7.933 1 6 1z" stroke="#F0EDE6" stroke-opacity="0.4" stroke-width="1.2"/><circle cx="6" cy="4.5" r="1.2" stroke="#F0EDE6" stroke-opacity="0.4" stroke-width="1"/></svg>
+              Anna Nagar, Chennai
+            </p>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="#F5C842"><path d="M6.5 1l1.5 3.1 3.4.5-2.45 2.4.58 3.4L6.5 8.7l-3.03 1.7.58-3.4L1.6 4.6l3.4-.5z"/></svg>
+            <span style="font-size:13px;font-weight:600;color:#F5C842;">4.6</span>
+            <span style="font-size:12px;color:#F0EDE6;opacity:0.4;">(14)</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;">
+          <span style="background:#262422;font-size:11px;padding:4px 10px;border-radius:20px;color:#F0EDE6;opacity:0.7;">🌿 Garden terrace</span>
+          <span style="background:#262422;font-size:11px;padding:4px 10px;border-radius:20px;color:#F0EDE6;opacity:0.7;">Up to 30 guests</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid #262422;">
+          <div>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:500;color:#F0EDE6;">₹2,800</span>
+            <span style="font-size:12px;color:#F0EDE6;opacity:0.4;"> / hr</span>
+          </div>
+          <button style="background:transparent;border:1px solid #E8642A;color:#E8642A;font-size:13px;font-weight:600;padding:8px 18px;border-radius:8px;cursor:pointer;font-family:'Inter',sans-serif;">View space</button>
+        </div>
+      </div>
+    </article>
+
+    <!-- CARD 6 -->
+    <article style="background:#3A3835;border:1px solid #262422;border-radius:16px;overflow:hidden;cursor:pointer;" onmouseover="this.style.transform='translateY(-4px)'" onmouseout="this.style.transform='translateY(0)'">
+      <div style="position:relative;height:220px;overflow:hidden;">
+        <div style="width:100%;height:100%;background:linear-gradient(160deg,#1a0d20 0%,#2d1040 50%,#4a1a60 100%);display:flex;align-items:center;justify-content:center;">
+          <svg width="64" height="64" viewBox="0 0 64 64" fill="none" opacity="0.25"><rect x="8" y="28" width="48" height="28" stroke="#F0EDE6" stroke-width="2"/><path d="M4 28 L32 8 L60 28" stroke="#F0EDE6" stroke-width="2" stroke-linejoin="round"/><rect x="24" y="40" width="16" height="16" stroke="#F0EDE6" stroke-width="1.5"/></svg>
+        </div>
+        <div style="position:absolute;top:12px;right:12px;background:rgba(13,13,13,0.7);backdrop-filter:blur(6px);border-radius:8px;padding:6px 10px;display:flex;align-items:center;gap:5px;">
+          <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1v6M3 4l3-3 3 3" stroke="#F5C842" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><path d="M1 9v1a1 1 0 001 1h8a1 1 0 001-1V9" stroke="#F5C842" stroke-width="1.3" stroke-linecap="round"/></svg>
+          <span style="font-size:11px;color:#F5C842;font-weight:500;">Add photos</span>
+        </div>
+        <div style="position:absolute;bottom:12px;left:12px;background:rgba(13,13,13,0.7);backdrop-filter:blur(6px);border-radius:6px;padding:4px 10px;">
+          <span style="font-size:11px;color:#F0EDE6;opacity:0.8;">11 photos</span>
+        </div>
+      </div>
+      <div style="padding:20px;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
+          <div>
+            <h2 style="margin:0 0 4px;font-size:17px;font-weight:600;letter-spacing:-0.3px;">Velvet Rooftop</h2>
+            <p style="margin:0;font-size:13px;color:#F0EDE6;opacity:0.5;display:flex;align-items:center;gap:4px;">
+              <svg width="12" height="12" viewBox="0 0 12 12" fill="none"><path d="M6 1C4.067 1 2.5 2.567 2.5 4.5 2.5 7.375 6 11 6 11S9.5 7.375 9.5 4.5C9.5 2.567 7.933 1 6 1z" stroke="#F0EDE6" stroke-opacity="0.4" stroke-width="1.2"/><circle cx="6" cy="4.5" r="1.2" stroke="#F0EDE6" stroke-opacity="0.4" stroke-width="1"/></svg>
+              OMR, Chennai
+            </p>
+          </div>
+          <div style="display:flex;align-items:center;gap:4px;">
+            <svg width="13" height="13" viewBox="0 0 13 13" fill="#F5C842"><path d="M6.5 1l1.5 3.1 3.4.5-2.45 2.4.58 3.4L6.5 8.7l-3.03 1.7.58-3.4L1.6 4.6l3.4-.5z"/></svg>
+            <span style="font-size:13px;font-weight:600;color:#F5C842;">5.0</span>
+            <span style="font-size:12px;color:#F0EDE6;opacity:0.4;">(62)</span>
+          </div>
+        </div>
+        <div style="display:flex;gap:8px;margin-bottom:16px;flex-wrap:wrap;">
+          <span style="background:#262422;font-size:11px;padding:4px 10px;border-radius:20px;color:#F0EDE6;opacity:0.7;">🎤 Live music</span>
+          <span style="background:#262422;font-size:11px;padding:4px 10px;border-radius:20px;color:#F0EDE6;opacity:0.7;">Up to 120 guests</span>
+          <span style="background:#262422;font-size:11px;padding:4px 10px;border-radius:20px;color:#F0EDE6;opacity:0.7;">Bar setup</span>
+        </div>
+        <div style="display:flex;justify-content:space-between;align-items:center;padding-top:14px;border-top:1px solid #262422;">
+          <div>
+            <span style="font-family:'JetBrains Mono',monospace;font-size:20px;font-weight:500;color:#F0EDE6;">₹9,500</span>
+            <span style="font-size:12px;color:#F0EDE6;opacity:0.4;"> / hr</span>
+          </div>
+          <button style="background:transparent;border:1px solid #E8642A;color:#E8642A;font-size:13px;font-weight:600;padding:8px 18px;border-radius:8px;cursor:pointer;font-family:'Inter',sans-serif;">View space</button>
+        </div>
+      </div>
+    </article>
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer style="border-top:1px solid #262422;padding:32px 48px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:16px;">
+    <div style="display:flex;align-items:center;gap:8px;">
+      <svg width="20" height="20" viewBox="0 0 28 28" fill="none"><rect width="28" height="28" rx="6" fill="#E8642A"/><path d="M6 20 L14 8 L22 20" stroke="#0D0D0D" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/><line x1="9" y1="15" x2="19" y2="15" stroke="#0D0D0D" stroke-width="2" stroke-linecap="round"/></svg>
+      <span style="font-family:'Syne',sans-serif;font-size:16px;font-weight:800;">Gusto</span>
+      <span style="color:#F0EDE6;opacity:0.3;font-size:13px;margin-left:8px;">© 2025 · Chennai</span>
+    </div>
+    <div style="display:flex;gap:24px;">
+      <a href="#" style="color:#F0EDE6;opacity:0.4;font-size:13px;text-decoration:none;">Privacy</a>
+      <a href="#" style="color:#F0EDE6;opacity:0.4;font-size:13px;text-decoration:none;">Terms</a>
+      <a href="#" style="color:#F0EDE6;opacity:0.4;font-size:13px;text-decoration:none;">Support</a>
+    </div>
+  </footer>
+
 </body>
 </html>
