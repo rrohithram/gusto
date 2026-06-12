@@ -18,7 +18,7 @@ to practice Git/GitHub collaboration before moving to the Flutter codebase.
 | A — Landing Page      | Rohith  | `index.html`                        | `feature/landing-page`   |
 | B — Venue Discovery   | Kanaiya | `venues.html`, `venue-details.html` | `feature/venue-discovery`|
 | C — Auth Pages        | Aditya  | `login.html`, `signup.html`         | `feature/auth-pages`     |
-| D — Docs              | Kaushik | `README.md`, `docs/setup.md`        | `feature/docs`           |
+| D — Docs              | Koushik | `README.md`, `docs/setup.md`        | `feature/docs`           |
 
 ## Pages
 - `index.html` — Landing page (hero, search, value props, footer)
